@@ -23,7 +23,6 @@ const contactSchema = z.object({
 
 const programs = [
   'Strength Training',
-  'MMA Conditioning',
   'Personal Training',
   'Functional Fitness',
   'HIIT',
