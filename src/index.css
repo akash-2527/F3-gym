@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-black:      #000000;
+    --color-dark:       #0a0a0a;
+    --color-red:        #C1121F;
+    --color-red-accent: #FF2D2D;
+    --color-white:      #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: auto; }   /* Lenis handles smoothing */
+
+  body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+    /* DEFAULT cursor — no custom cursor */
+    cursor: auto;
+  }
+
+  ::selection { background-color: #C1121F; color: #FFFFFF; }
+
+  ::-webkit-scrollbar       { width: 3px; }
+  ::-webkit-scrollbar-track { background: #000; }
+  ::-webkit-scrollbar-thumb { background: #C1121F; border-radius: 2px; }
+}
+
+@layer components {
+
+  /* Red glow */
+  .red-glow      { box-shadow: 0 0 30px rgba(193,18,31,0.5), 0 0 60px rgba(193,18,31,0.3); }
+  .red-glow-text { text-shadow: 0 0 20px rgba(255,45,45,0.8), 0 0 40px rgba(255,45,45,0.4); }
+
+  /* Section label */
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #C1121F;
+    display: block;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .glass-red {
+    background: rgba(193,18,31,0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(193,18,31,0.15);
+  }
+
+  /* Marquee */
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    animation: marquee 22s linear infinite;
+    display: flex;
+    width: max-content;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  /* Pulse glow keyframe (used by timeline dots etc.) */
+  @keyframes pulseRed {
+    0%,100% { box-shadow: 0 0 0 0 rgba(193,18,31,0); opacity:0.6; }
+    50%     { box-shadow: 0 0 0 8px rgba(193,18,31,0); opacity:0.2; }
+  }
+}
+
+@layer utilities {
+  .font-display  { font-family: 'Bebas Neue', sans-serif; }
+  .font-heading  { font-family: 'Barlow Condensed', sans-serif; }
+
+  .text-gradient-red {
+    background: linear-gradient(135deg, #C1121F 0%, #FF2D2D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* scale-108 used in gallery preview hover */
+  .group-hover\:scale-108:is(:hover *) { transform: scale(1.08); }
+}
+
+/* Performance hint */
+.gsap-animated { will-change: transform, opacity; }
+
+/* Reduced-motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
