@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navbar from '../components/common/Navbar'
 import Footer from '../components/common/Footer'
 import PageTransition from '../components/common/PageTransition'
+import FloatingActions from '../components/common/FloatingActions'
 
 const Home     = lazy(() => import('../pages/Home'))
 const About    = lazy(() => import('../pages/About'))
@@ -37,6 +38,7 @@ export default function AppRouter() {
         </Suspense>
       </AnimatePresence>
       <Footer />
+      <FloatingActions />
     </>
   )
 }

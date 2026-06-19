@@ -275,7 +275,7 @@ export function ContactCTA() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <ButtonPrimary to="/contact">Book Free Consultation</ButtonPrimary>
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/97056 05917"
             className="flex items-center gap-2 px-8 py-4 border border-white/18 text-white font-heading text-sm tracking-widest uppercase hover:border-f3-red hover:text-f3-red transition-all duration-300"
           >
             WhatsApp Us

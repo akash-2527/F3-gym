@@ -23,6 +23,7 @@ const contactSchema = z.object({
 
 const programs = [
   'Strength Training',
+  'MMA Conditioning',
   'Personal Training',
   'Functional Fitness',
   'HIIT',
@@ -291,8 +292,8 @@ export default function Contact() {
                   {
                     icon: Phone,
                     label: 'Phone / WhatsApp',
-                    value: '+91 98765 43210',
-                    href: 'tel:+919876543210',
+                    value: '+91 97056 05917',
+                    href: 'tel:+919705605917',
                   },
                   {
                     icon: Mail,
@@ -303,8 +304,8 @@ export default function Contact() {
                   {
                     icon: MapPin,
                     label: 'Location',
-                    value: '123 Fighter\'s Lane, Banjara Hills, Hyderabad, TS 500034',
-                    href: 'https://maps.google.com',
+                    value: 'Second floor, Arabian Bakers Rd, Old Bowenpally Cross Rd, Yadireddy Colony, Mallikarjuna Nagar, Old Bowenpally, Secunderabad, Telangana 500011',
+                    href: 'https://www.google.com/maps/search/?api=1&query=Fight+For+Fitness+F3+Old+Bowenpally+Secunderabad',
                   },
                 ].map(({ icon: Icon, label, value, href }) => (
                   <a
@@ -334,13 +335,15 @@ export default function Contact() {
                   </div>
                   <div className="space-y-2">
                     {[
-                      { days: 'Monday – Friday', hours: '5:00 AM – 11:00 PM' },
-                      { days: 'Saturday', hours: '6:00 AM – 10:00 PM' },
-                      { days: 'Sunday', hours: '7:00 AM – 9:00 PM' },
-                    ].map(({ days, hours }) => (
-                      <div key={days} className="flex justify-between items-center">
+                      { days: 'Monday – Saturday', hours: '5:30 AM – 11:00 AM', closed: false },
+                      { days: 'Monday – Saturday', hours: '5:00 PM – 10:00 PM', closed: false },
+                      { days: 'Sunday', hours: 'Closed', closed: true },
+                    ].map(({ days, hours, closed }, i) => (
+                      <div key={`${days}-${i}`} className="flex justify-between items-center">
                         <span className="font-body text-xs text-white/40">{days}</span>
-                        <span className="font-body text-xs text-white">{hours}</span>
+                        <span className={`font-body text-xs ${closed ? 'text-f3-red' : 'text-white'}`}>
+                          {hours}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -369,7 +372,7 @@ export default function Contact() {
 
                 {/* WhatsApp CTA */}
                 <a
-                  href="https://wa.me/919876543210?text=Hi%20F3!%20I%20want%20to%20start%20my%20fitness%20journey."
+                  href="https://wa.me/919705605917?text=Hi%20F3!%20I%20want%20to%20start%20my%20fitness%20journey."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-info-item flex items-center gap-3 px-6 py-4 border border-green-500/30 bg-green-500/5 hover:border-green-500/60 hover:bg-green-500/10 transition-all duration-300 group"
@@ -416,12 +419,14 @@ export default function Contact() {
             `,
             backgroundSize: '60px 60px',
           }}>
-            <div className="text-center">
+            <div className="text-center px-6">
               <MapPin size={40} className="text-f3-red mx-auto mb-4" />
               <h3 className="font-heading text-xl text-white mb-1">Find Us</h3>
-              <p className="font-body text-sm text-white/40">123 Fighter's Lane, Banjara Hills, Hyderabad</p>
+              <p className="font-body text-sm text-white/40 max-w-sm mx-auto">
+                Second floor, Arabian Bakers Rd, Old Bowenpally Cross Rd, Old Bowenpally, Secunderabad, Telangana 500011
+              </p>
               <a
-                href="https://maps.google.com"
+                href="https://www.google.com/maps/search/?api=1&query=Fight+For+Fitness+F3+Old+Bowenpally+Secunderabad"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 font-heading text-xs text-f3-red hover:text-f3-red-accent tracking-widest uppercase transition-colors"

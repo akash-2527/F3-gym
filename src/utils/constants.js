@@ -5,9 +5,9 @@ export const BRAND = {
   tagline: 'Where Warriors Are Forged',
   year: 2018,
   email: 'train@f3fitness.com',
-  phone: '+91 98765 43210',
-  whatsapp: '919876543210',
-  address: '123 Fighter\'s Lane, Banjara Hills, Hyderabad, TS 500034',
+  phone: '+91 97056 05917',
+  whatsapp: '9197056 05917',
+  address: 'Second floor, Arabian Bakers, Rd, Old Bowenpally Cross Rd, Yadireddy Colony, Mallikarjuna Nagar, Old Bowenpally, Secunderabad, Telangana 500011',
 }
 
 // ─── Colors ──────────────────────────────────────────────────────
@@ -45,10 +45,11 @@ export const SOCIAL_LINKS = [
 ]
 
 // ─── Hours ────────────────────────────────────────────────────────
+// Monday–Saturday: split morning/evening session. Sunday: closed.
 export const HOURS = [
-  { days: 'Monday – Friday', open: '5:00 AM', close: '11:00 PM' },
-  { days: 'Saturday', open: '6:00 AM', close: '10:00 PM' },
-  { days: 'Sunday', open: '7:00 AM', close: '9:00 PM' },
+  { days: 'Monday – Saturday', period: 'Morning', open: '5:30 AM', close: '11:00 AM', closed: false },
+  { days: 'Monday – Saturday', period: 'Evening', open: '5:00 PM', close: '10:00 PM', closed: false },
+  { days: 'Sunday', period: null, open: null, close: null, closed: true },
 ]
 
 // ─── localStorage keys ───────────────────────────────────────────

@@ -83,7 +83,7 @@ describe('About Page', () => {
   })
   it('renders founder name', () => {
     render(<Wrap><About /></Wrap>)
-    expect(screen.getByText('ADITYA RAO')).toBeInTheDocument()
+    expect(screen.getByText('Charan')).toBeInTheDocument()
   })
   it('renders Join CTA', () => {
     render(<Wrap><About /></Wrap>)

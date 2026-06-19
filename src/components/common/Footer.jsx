@@ -107,12 +107,12 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-f3-red mt-0.5 shrink-0" />
                 <span className="font-body text-sm text-white/38 leading-relaxed">
-                  123 Fighter's Lane,<br />Hyderabad, TS 500034
+                  Second Floor, Arabian Bakers Rd,<br />Old Bowenpally, Secunderabad,<br />Telangana 500011
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-f3-red shrink-0" />
-                <a href="tel:+919876543210" className="font-body text-sm text-white/38 hover:text-white transition-colors">+91 98765 43210</a>
+                <a href="tel:+919705605917" className="font-body text-sm text-white/38 hover:text-white transition-colors">+91 97056 05917</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={14} className="text-f3-red shrink-0" />
@@ -123,14 +123,18 @@ export default function Footer() {
             <div className="p-4 border border-white/5 bg-white/[0.02]">
               <p className="section-label text-[9px] mb-2">Hours</p>
               {[
-                { d: 'Mon – Fri', h: '5 AM – 11 PM' },
-                { d: 'Sat – Sun', h: '6 AM – 10 PM' },
-              ].map(({ d, h }) => (
-                <div key={d} className="flex justify-between">
+                { d: 'Mon – Sat', h: '5:30 – 11 AM' },
+                { d: 'Mon – Sat', h: '5 – 10 PM' },
+              ].map(({ d, h }, i) => (
+                <div key={`${d}-${i}`} className="flex justify-between">
                   <span className="font-body text-[11px] text-white/30">{d}</span>
                   <span className="font-body text-[11px] text-white/60">{h}</span>
                 </div>
               ))}
+              <div className="flex justify-between mt-0.5">
+                <span className="font-body text-[11px] text-white/30">Sunday</span>
+                <span className="font-body text-[11px] text-f3-red">Closed</span>
+              </div>
             </div>
           </div>
         </div>

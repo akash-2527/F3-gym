@@ -12,7 +12,7 @@ const FOUNDER_IMG = 'https://images.unsplash.com/photo-1549476464-37392f717541?a
 const STORY_IMG   = 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80'
 
 const timeline = [
-  { year: '2018', title: 'The Beginning',      desc: 'F3 founded by Coach Aditya Rao in a 1,200 sq ft garage — nothing but iron, sweat, and a vision to build warriors.' },
+  { year: '2018', title: 'The Beginning',      desc: 'F3 founded by Coach Charan in a 1,200 sq ft garage — nothing but iron, sweat, and a vision to build warriors.' },
   { year: '2019', title: 'First Champions',    desc: 'Three F3 athletes win regional titles. The philosophy is proven: discipline, intensity, community.' },
   { year: '2020', title: 'Expansion',          desc: 'Despite global challenges, F3 doubles in size. Online programs launch, reaching 200+ members worldwide.' },
   { year: '2021', title: 'New Facility',       desc: '6,000 sq ft state-of-the-art training centre opens with dedicated strength and functional zones.' },
@@ -183,7 +183,7 @@ export default function About() {
                   <span className="text-f3-red">FROM CIVILIANS.</span>
                 </AnimatedText>
                 <div className="space-y-4 font-body text-sm text-white/55 leading-relaxed reveal-up" style={{ opacity: 1 }}>
-                  <p>F3 was born in 2018 when Coach Aditya Rao noticed something alarming: most gyms were focused on aesthetics over performance, comfort over challenge, and profit over progress.</p>
+                  <p>F3 was born in 2018 when Coach Charan noticed something alarming: most gyms were focused on aesthetics over performance, comfort over challenge, and profit over progress.</p>
                   <p>He built F3 on a radical premise — that every person who walks through our doors carries the genetic blueprint of a warrior. A coach's job isn't to motivate. It's to <span className="text-white font-500">excavate the champion already inside.</span></p>
                   <p>Today, F3 is Hyderabad's most intense, most transformative, most respected performance training centre. Still guided by the same principle: forge warriors, one session at a time.</p>
                 </div>
@@ -308,7 +308,7 @@ export default function About() {
                 <div className="aspect-[3/4] max-w-md overflow-hidden">
                   <img
                     src={FOUNDER_IMG}
-                    alt="Aditya Rao – Founder & Head Coach"
+                    alt="Charan – Founder & Head Coach"
                     className="w-full h-full object-cover grayscale contrast-110"
                     loading="lazy"
                   />
@@ -326,13 +326,13 @@ export default function About() {
                 </div>
                 <AnimatedText as="h2" className="font-display text-white mb-1"
                   style={{ fontSize: 'clamp(38px, 5vw, 70px)', lineHeight: 0.94 }}>
-                  ADITYA RAO
+                  Charan 
                 </AnimatedText>
                 <p className="font-heading text-f3-red text-lg tracking-widest uppercase mb-7">
                   Founder & Head Coach
                 </p>
                 <div className="space-y-4 font-body text-sm text-white/55 leading-relaxed mb-9">
-                  <p>With 15+ years of competitive strength, conditioning, and performance science experience, Coach Aditya is the vision and the discipline behind F3.</p>
+                  <p>With 15+ years of competitive strength, conditioning, and performance science experience, Coach Charan is the vision and the discipline behind F3.</p>
                   <p>A former national-level competitive athlete and certified strength & conditioning specialist, his methodology bridges the world of combat sports and elite strength athletics in a uniquely powerful way.</p>
                   <p className="italic text-white/70">"My job is not to make training easy. My job is to make <span className="text-white not-italic">you</span> extraordinary."</p>
                 </div>
